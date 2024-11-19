@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 mongoose
-  .connect('mongodb+srv://mongodb:manasdb@cluster0.a6t31xg.mongodb.net/CRUD-api', {
+  .connect('mongodb+srv://manas:manasdb@cluster0.jffa1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -24,3 +24,4 @@ app.use('/todos', todoRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
